@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>yanna@web HOBBIES</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="page-header">
+    <div class="hero-text">
+      <p class="eyebrow">welcome to</p>
+      <h1>yanna@web HOBBIES</h1>
+      <p class="subtitle">A cozy spot to explore creativity.</p>
+    </div>
+    <div class="header-actions">
+      <div class="role-switcher">
+        <span>Role:</span>
+        <button id="ownerButton" class="role-btn">Owner</button>
+        <button id="viewerButton" class="role-btn active">Viewer</button>
+      </div>
+      <button id="themeToggle" aria-label="Toggle pastel glow">Soft glow</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>What I love to do</h2>
+      <p>Each hobby is a creative platform where I can make, imagine, reflect, and tell stories.</p>
+    </section>
+
+    <section class="cards" id="hobbyCards">
+      <article class="card card-sewing" data-platform="Sewing">
+        <div class="card-icon">✂️</div>
+        <h3>Sewing</h3>
+        <p>Crafting fabrics into dresses, costumes, and cozy daily pieces with care and color.</p>
+      </article>
+
+      <article class="card card-cosplay" data-platform="Cosplaying">
+        <div class="card-icon">🎭</div>
+        <h3>Cosplaying</h3>
+        <p>Bringing characters to life through costume design, props, and playful performance.</p>
+      </article>
+
+      <article class="card card-journaling" data-platform="Journaling">
+        <div class="card-icon">📓</div>
+        <h3>Journaling</h3>
+        <p>Collecting thoughts, dreams, and small moments in a calm, pastel-inspired space.</p>
+      </article>
+
+      <article class="card card-writing" data-platform="Writing">
+        <div class="card-icon">✍️</div>
+        <h3>Writing</h3>
+        <p>Exploring stories, ideas, and self-expression with words that feel warm and personal.</p>
+      </article>
+
+      <article class="card card-vlogging" data-platform="Vlogging">
+        <div class="card-icon">📹</div>
+        <h3>Vlogging</h3>
+        <p>Creating and romanticizing moments through capturing life's experiences.</p>
+      </article>
+
+      <article class="card card-crochet" data-platform="Crochet">
+        <div class="card-icon">🧵</div>
+        <h3>Crochet</h3>
+        <p>Creating intricate patterns and cozy items with yarn and hooks.</p>
+      </article>
+    </section>
+
+    <section class="platform-panel hidden">
+      <div class="panel-header">
+        <button id="backButton" class="back-button hidden">← Back to platforms</button>
+        <div>
+          <h2 id="platformTitle">Latest updates</h2>
+          <p id="platformDescription">Click a hobby to read the latest posts and react.</p>
+        </div>
+      </div>
+      <div class="platform-buttons" id="platformButtons">
+        <button class="platform-btn active" data-platform="All">All</button>
+        <button class="platform-btn" data-platform="Sewing">Sewing</button>
+        <button class="platform-btn" data-platform="Cosplaying">Cosplaying</button>
+        <button class="platform-btn" data-platform="Journaling">Journaling</button>
+        <button class="platform-btn" data-platform="Writing">Writing</button>
+        <button class="platform-btn" data-platform="Vlogging">Vlogging</button>
+        <button class="platform-btn" data-platform="Crochet">Crochet</button>
+      </div>
+    </section>
+
+    <section class="posts-section hidden">
+      <div class="new-post-card">
+        <h3>Post a new update</h3>
+        <form id="newPostForm">
+          <label>
+            Platform
+            <select id="newPostPlatform">
+              <option value="Sewing">Sewing</option>
+              <option value="Cosplaying">Cosplaying</option>
+              <option value="Journaling">Journaling</option>
+              <option value="Writing">Writing</option>
+              <option value="Vlogging">Vlogging</option>
+              <option value="Crochet">Crochet</option>
+            </select>
+          </label>
+          <label>
+            Title
+            <input type="text" id="newPostTitle" placeholder="Your update title" required />
+          </label>
+          <label>
+            Media type
+            <select id="newPostMediaType">
+              <option value="image">Image</option>
+              <option value="video">Video</option>
+            </select>
+          </label>
+          <label>
+            Media URL
+            <input type="url" id="newPostMedia" placeholder="Paste an image or video link" />
+          </label>
+          <label>
+            Share your update
+            <textarea id="newPostText" rows="4" placeholder="Write something about this post..." required></textarea>
+          </label>
+          <button type="submit" class="primary-button">Share update</button>
+        </form>
+      </div>
+
+      <div id="postsContainer" class="posts-grid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Thank you for visiting and being part of this creative journey!</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
